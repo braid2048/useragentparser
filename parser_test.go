@@ -9,6 +9,7 @@ import (
 
 	"github.com/gamebtc/devicedetector"
 	"github.com/halo2024/useragentparser"
+
 	//device_detector "github.com/robicode/device-detector"
 	devicedetector_go "github.com/umutbasal/device-detector-go"
 )

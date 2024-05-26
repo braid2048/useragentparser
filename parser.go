@@ -52,10 +52,8 @@ func (parser *userAgentParser) Parse(userAgentString string) (userAgent *UserAge
 	}
 
 	userAgent = parser.preDetect(userAgentString)
-	// userAgent = &UserAgent{}
 
 	var wg sync.WaitGroup
-
 	if userAgent.Device == nil {
 		wg.Add(1)
 
@@ -147,6 +145,14 @@ func (parser *userAgentParser) preDetect(agentString string) (userAgent *UserAge
 	if firstPart := strings.Split(agentString, "("); len(firstPart) > 1 {
 		mainPart = strings.Split(firstPart[1], ")")[0]
 	}
+
+	if mainPart == "" {
+		return &UserAgent{
+			Device: &Device{Brand: DeviceBrandOther},
+			Os:     &Os{Family: "Other"},
+		}
+	}
+
 	var items []string
 	if strings.HasPrefix(agentString, "AliXAdSDK") || strings.HasPrefix(agentString, "Youku") {
 		mainPart = agentString
