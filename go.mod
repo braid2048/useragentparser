@@ -1,6 +1,6 @@
 module github.com/halo2024/useragentparser
 
-go 1.21
+go 1.22
 
 require (
 	github.com/gamebtc/devicedetector v0.0.0-20200513081329-9d0833c20d79
