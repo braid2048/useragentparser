@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/braid2048/useragentparser"
 	"github.com/gamebtc/devicedetector"
-	"github.com/halo2024/useragentparser"
 
 	//device_detector "github.com/robicode/device-detector"
 	devicedetector_go "github.com/umutbasal/device-detector-go"

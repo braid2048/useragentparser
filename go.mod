@@ -1,4 +1,4 @@
-module github.com/halo2024/useragentparser
+module github.com/braid2048/useragentparser
 
 go 1.22
 
